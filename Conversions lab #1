@@ -1,0 +1,47 @@
+module conversion{
+	public static int getDecimal(int b) // function to convert binary to decimal
+		{
+			//Initializing variables
+			Int num =b;
+			Int decimal = 0;
+			int base= 1;
+			int temp = num;
+
+			while (temp>0)
+			{
+				Int digit = temp%10;
+				temp = temp/10;
+				decimal += digit*base;
+				base = base*2;
+			}
+			return decimal;
+			}
+
+		static int getNumber(string hex)
+	        {
+			String digits = "0123456789ABCDEF";
+
+			Hex = hex.toUpperCase();
+
+			int val= 0;
+
+			For(int i=0; i< hex.length();I++)
+
+			{ char c =hex.charAt(I);
+		
+			Int d = digits indexOf ( c );
+
+			val= ll val + d;
+
+		}
+
+		Return Val;
+}
+public static void main(String args[]) { // output on screen 
+
+	int num = 1101011;
+	
+	System.out.println("Decimal of 1101011 is:" +getDecimal(num));
+
+	System.out.println("Decimal of ABCD is:" +getNumber(ABCD));
+}
