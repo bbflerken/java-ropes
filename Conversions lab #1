@@ -7,8 +7,7 @@ public class Functions
 	    int num = b; 
 	    int value = 0; 
 
-	    // Initializing base 
-	    // value to 1, i.e 2^0 
+	    // Initializing base
 	    int base = 1; 
 
 	    int temp = num; 
@@ -23,8 +22,22 @@ public class Functions
 	    } 
 	    return value;
 	}	
+	public statuc void binary(int decimal) //function from decimal to binary
+	{
+	        int binary [] = new int[40]; // array to store binary number 
+		int index = 0; // variable to move in the array
+		while(decimal >0) // loop for the conversion
+		{
+		  binary[ index ++] = decimal%2;
+		  decimal = decimal/2;
+		}
+	        for(int i = index-1;i >= 0;i--) // loop to print array on screen
+		{    
+                      System.out.print(binary[i]); 
+	        }
+        }
 
-	public static int getDecimal(String hex)
+	public static int getDecimal(String hex) // in progress
 	{
 		char a='A';
 		char b= 'B';
@@ -34,7 +47,7 @@ public class Functions
 
 		return ;
 	}
-	static void decToHexa(String letter) 
+	static void decToHexa(String letter) // in progress
     {    
         // char array to store hexadecimal number 
         char[] hexaDeciNum = new char[100]; 
@@ -72,6 +85,6 @@ public class Functions
 		String letter1 = a;
 		
 		System.out.println("Decimal of 1101011 is:" +getDecimal(num));
- 
+                System.out.println("Binary of 375 is :" binary(375);
 		System.out.println("Decimal of ABCD is:" decToHexa(letter1));
 	}
