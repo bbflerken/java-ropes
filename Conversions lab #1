@@ -1,5 +1,4 @@
 
-
 public class Functions 
 {
 	public static int getDecimal(int b)// function to convert binary to decimal
@@ -7,7 +6,8 @@ public class Functions
 	    int num = b; 
 	    int value = 0; 
 
-	    // Initializing base
+	    // Initializing base 
+	    // value to 1, i.e 2^0 
 	    int base = 1; 
 
 	    int temp = num; 
@@ -22,9 +22,11 @@ public class Functions
 	    } 
 	    return value;
 	}	
-	public statuc void binary(int decimal) //function from decimal to binary
+	
+	
+	public static void binary(int decimal) //function from decimal to binary
 	{
-	        int binary [] = new int[40]; // array to store binary number 
+	    int binary [] = new int[40]; // array to store binary number 
 		int index = 0; // variable to move in the array
 		while(decimal >0) // loop for the conversion
 		{
@@ -32,22 +34,26 @@ public class Functions
 		  decimal = decimal/2;
 		}
 	        for(int i = index-1;i >= 0;i--) // loop to print array on screen
-		{    
-                      System.out.print(binary[i]); 
+	        {    
+                 System.out.print(binary[i]); 
 	        }
-        }
+       }
 
-	public static int getDecimal(String hex) // in progress
+	
+	public static int hexToDecimal ()
 	{
 		char a='A';
 		char b= 'B';
 		char c= 'C';
 		char d='D';
+		
 		int x = a+b+c+d;
-
-		return ;
+		
+		return x;
 	}
-	static void decToHexa(String letter) // in progress
+	
+	
+	public static void decToHexa(String []letter) 
     {    
         // char array to store hexadecimal number 
         char[] hexaDeciNum = new char[100]; 
@@ -78,13 +84,12 @@ public class Functions
         } 
   
 
-}
-	public static void main(String args[]) { // output on screen 
-
+    }
+	
+	public static void main(String args[]) // output on screen 
+	{ 
 		int num = 1101011;
-		String letter1 = a;
-		
 		System.out.println("Decimal of 1101011 is:" +getDecimal(num));
-                System.out.println("Binary of 375 is :" binary(375);
-		System.out.println("Decimal of ABCD is:" decToHexa(letter1));
+		System.out.println("Decimal of ABCD is:" +hexToDecimal());
 	}
+}
