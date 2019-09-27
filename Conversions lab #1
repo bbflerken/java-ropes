@@ -1,6 +1,9 @@
 
-public class Functions {
-	public static int getDecimal(int b) {// function to convert binary to decimal
+
+public class Functions 
+{
+	public static int getDecimal(int b)// function to convert binary to decimal
+	{
 	    int num = b; 
 	    int value = 0; 
 
@@ -9,7 +12,8 @@ public class Functions {
 	    int base = 1; 
 
 	    int temp = num; 
-	    while (temp > 0) { 
+	    while (temp > 0)
+	    { 
 	        int digit = temp % 10; 
 	        temp = temp / 10; 
 
@@ -17,36 +21,57 @@ public class Functions {
 
 	        base = base * 2; 
 	    } 
+	    return value;
 	}	
 
-			static int getNumber(String hex) // function to convert hexadecimal to decimal
-		        {
-				String digits = "0123456789ABCDEF";
+	public static int getDecimal(String hex)
+	{
+		char a='A';
+		char b= 'B';
+		char c= 'C';
+		char d='D';
+		int x = a+b+c+d;
 
-				hex = hex.toUpperCase();
-
-				int val= 0;
-
-				For (int i=0; i< hex.length();I++)
-
-				{ char c =hex.charAt(I);
-			
-				int d = digits indexOf ( c );
-
-				value= ll value + d;
-
-			}
-
-			Return Val;
-		        }
-
+		return ;
+	}
+	static void decToHexa(String letter) 
+    {    
+        // char array to store hexadecimal number 
+        char[] hexaDeciNum = new char[100]; 
+       
+        // counter for hexadecimal number array 
+        int i = 0; 
+        while(i!=0) 
+        {    
+            // temporary variable to store remainder 
+            int temp  = 0; 
+           
+            // storing remainder in temp variable. 
+            temp = i % 16; 
+           
+            // check if temp < 10 
+            if(temp < 10) 
+            { 
+                hexaDeciNum[i] = (char)(temp + 48); 
+                i++; 
+            } 
+            else
+            { 
+                hexaDeciNum[i] = (char)(temp + 55); 
+                i++; 
+            } 
+           
+            i = i/16; 
+        } 
+  
 
 }
 	public static void main(String args[]) { // output on screen 
 
 		int num = 1101011;
+		String letter1 = a;
 		
 		System.out.println("Decimal of 1101011 is:" +getDecimal(num));
  
-		System.out.println("Decimal of ABCD is:" +getNumber(ABCD));
+		System.out.println("Decimal of ABCD is:" decToHexa(letter1));
 	}
