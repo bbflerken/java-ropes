@@ -40,17 +40,20 @@ public class Functions
        }
 
 	
-	public static int hexToDecimal ()
-	{
-		char a='A';
-		char b= 'B';
-		char c= 'C';
-		char d='D';
-		
-		int x = a+b+c+d;
-		
-		return x;
-	}
+	public static int hexDecimal(String hex)
+	{  
+	    String letters = "0123456789ABCDEF";  // defining a string to localize 
+	    hex = hex.toUpperCase();  // converting to upper case
+	    int val = 0;  //variable to store the decimal         
+	    
+	    for (int i = 0; i < hex.length(); i++)  // loop to find value	 
+	    {  
+	         char c = hex.charAt(i);  
+	         int d = letters.indexOf(c);  
+	         val = 16*val + d;  
+	    }  
+	    return val;  // returning decimal for output
+	}  
 	
 	
 	public static void decToHexa(String []letter) 
@@ -89,7 +92,13 @@ public class Functions
 	public static void main(String args[]) // output on screen 
 	{ 
 		int num = 1101011;
-		System.out.println("Decimal of 1101011 is:" +getDecimal(num));
-		System.out.println("Decimal of ABCD is:" +hexToDecimal());
+		
+		System.out.println("Decimal of 1101011 is:" +getDecimal(num));// conversion of binary to decimal
+		System.out.println();
+		System.out.println("Binary of 375 is:"); 
+		binary(375);
+		System.out.println();
+		System.out.println("Decimal of ABCD is:" +hexDecimal("abcd"));
+		System.out.println();
 	}
 }
