@@ -1,47 +1,52 @@
-module conversion{
-	public static int getDecimal(int b) // function to convert binary to decimal
-		{
-			//Initializing variables
-			Int num =b;
-			Int decimal = 0;
-			int base= 1;
-			int temp = num;
 
-			while (temp>0)
-			{
-				Int digit = temp%10;
-				temp = temp/10;
-				decimal += digit*base;
-				base = base*2;
+public class Functions {
+	public static int getDecimal(int b) {// function to convert binary to decimal
+	    int num = b; 
+	    int value = 0; 
+
+	    // Initializing base 
+	    // value to 1, i.e 2^0 
+	    int base = 1; 
+
+	    int temp = num; 
+	    while (temp > 0) { 
+	        int digit = temp % 10; 
+	        temp = temp / 10; 
+
+	        value += digit * base; 
+
+	        base = base * 2; 
+	    } 
+	}	
+
+			static int getNumber(String hex) // function to convert hexadecimal to decimal
+		        {
+				String digits = "0123456789ABCDEF";
+
+				hex = hex.toUpperCase();
+
+				int val= 0;
+
+				For (int i=0; i< hex.length();I++)
+
+				{ char c =hex.charAt(I);
+			
+				int d = digits indexOf ( c );
+
+				value= ll value + d;
+
 			}
-			return decimal;
-			}
 
-		static int getNumber(string hex)
-	        {
-			String digits = "0123456789ABCDEF";
+			Return Val;
+		        }
 
-			Hex = hex.toUpperCase();
 
-			int val= 0;
+}
+	public static void main(String args[]) { // output on screen 
 
-			For(int i=0; i< hex.length();I++)
-
-			{ char c =hex.charAt(I);
+		int num = 1101011;
 		
-			Int d = digits indexOf ( c );
-
-			val= ll val + d;
-
-		}
-
-		Return Val;
-}
-public static void main(String args[]) { // output on screen 
-
-	int num = 1101011;
-	
-	System.out.println("Decimal of 1101011 is:" +getDecimal(num));
-
-	System.out.println("Decimal of ABCD is:" +getNumber(ABCD));
-}
+		System.out.println("Decimal of 1101011 is:" +getDecimal(num));
+ 
+		System.out.println("Decimal of ABCD is:" +getNumber(ABCD));
+	}
