@@ -61,13 +61,13 @@ public class Functions
 		int y =375; // variable to store decimal value for conversion
 	
 		
-		System.out.println("Decimal of 1101011 is:" +getDecimal(num));// conversion of binary to decimal
+		System.out.println("Decimal of 1101011 is: " +getDecimal(num));// conversion of binary to decimal
 		
 		System.out.println( );
-		System.out.println("Binary of 375 is:"); binary(y);// conversion of decimal to binary
+		System.out.println("Binary of 375 is: "); binary(y);// conversion of decimal to binary
 		
 		System.out.println( );
-		System.out.println("Decimal of ABCD is:" +hexDecimal("abcd"));// conversion of hexadecimal to decimal
+		System.out.println("Decimal of ABCD is: " +hexDecimal("abcd"));// conversion of hexadecimal to decimal
 		
 		
 		
@@ -75,11 +75,11 @@ public class Functions
 		int value= (int) A;//variable to store the decimal value after conversion 
 		
 		System.out.println( );
-		System.out.println("the decimal value of the ASCII character A is:" + value);//conversion of ascii to decimal
+		System.out.println("the decimal value of the ASCII character A is: " + value);//conversion of ascii to decimal
 		
 		int b = 121;//variable to store decimal value
 		char x = (char)b;// variable to store the ascii character after conversion
 		System.out.println( );
-		System.out.println("The ASCII character of decimal value 121 is:" + x);//conversion of decimal to ascii
+		System.out.println("The ASCII character of decimal value 121 is: " + x);//conversion of decimal to ascii
 	}
 }
