@@ -1,4 +1,3 @@
-
 public class Functions 
 {
 	public static int getDecimal(int b)// function to convert binary to decimal
@@ -11,7 +10,7 @@ public class Functions
 	    int base = 1; 
 
 	    int temp = num; 
-	    while (temp > 0)
+	    while (temp > 0) //loop for conversion of binary to decimal
 	    { 
 	        int digit = temp % 10; 
 	        temp = temp / 10; 
@@ -20,7 +19,7 @@ public class Functions
 
 	        base = base * 2; 
 	    } 
-	    return value;
+	    return value; // returning the decimal value for output
 	}	
 	
 	
@@ -33,7 +32,7 @@ public class Functions
 		  binary[ index ++] = decimal%2;
 		  decimal = decimal/2;
 		}
-	        for(int i = index-1;i >= 0;i--) // loop to print array on screen
+	        for(int i = index-1;i >= 0;i--) // loop to print binary array on screen
 	        {    
                  System.out.print(binary[i]); 
 	        }
@@ -56,49 +55,31 @@ public class Functions
 	}  
 	
 	
-	public static void decToHexa(String []letter) 
-    {    
-        // char array to store hexadecimal number 
-        char[] hexaDeciNum = new char[100]; 
-       
-        // counter for hexadecimal number array 
-        int i = 0; 
-        while(i!=0) 
-        {    
-            // temporary variable to store remainder 
-            int temp  = 0; 
-           
-            // storing remainder in temp variable. 
-            temp = i % 16; 
-           
-            // check if temp < 10 
-            if(temp < 10) 
-            { 
-                hexaDeciNum[i] = (char)(temp + 48); 
-                i++; 
-            } 
-            else
-            { 
-                hexaDeciNum[i] = (char)(temp + 55); 
-                i++; 
-            } 
-           
-            i = i/16; 
-        } 
-  
-
-    }
-	
 	public static void main(String args[]) // output on screen 
 	{ 
-		int num = 1101011;
+		int num = 1101011;// variable to store binary number for conversion
+		int y =375; // variable to store decimal value for conversion
+	
 		
 		System.out.println("Decimal of 1101011 is:" +getDecimal(num));// conversion of binary to decimal
-		System.out.println();
-		System.out.println("Binary of 375 is:"); 
-		binary(375);
-		System.out.println();
-		System.out.println("Decimal of ABCD is:" +hexDecimal("abcd"));
-		System.out.println();
+		
+		System.out.println( );
+		System.out.println("Binary of 375 is:"); binary(y);// conversion of decimal to binary
+		
+		System.out.println( );
+		System.out.println("Decimal of ABCD is:" +hexDecimal("abcd"));// conversion of hexadecimal to decimal
+		
+		
+		
+		char A = 'A';// variable to store the ascii character
+		int value= (int) A;//variable to store the decimal value after conversion 
+		
+		System.out.println( );
+		System.out.println("the decimal value of the ASCII character A is:" + value);//conversion of ascii to decimal
+		
+		int b = 121;//variable to store decimal value
+		char x = (char)b;// variable to store the ascii character after conversion
+		System.out.println( );
+		System.out.println("The ASCII character of decimal value 121 is:" + x);//conversion of decimal to ascii
 	}
 }
