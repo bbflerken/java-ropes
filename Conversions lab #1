@@ -79,6 +79,7 @@ public class Functions
 		
 		int b = 121;//variable to store decimal value
 		char x = (char)b;// variable to store the ascii character after conversion
+		
 		System.out.println( );
 		System.out.println("The ASCII character of decimal value 121 is: " + x);//conversion of decimal to ascii
 	}
